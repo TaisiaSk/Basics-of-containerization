@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Add Post</title>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar__link">Home</a>
+      <a href="/posts/list" class="navbar__link">Posts List</a>
+    </nav>
+
+    <main class="main">
+      <h3>Create New Post</h3>
+
+      <form method="POST" action="/posts/add" class="form-add">
+        <input type="text" name="text" placeholder="Enter text..." class="form-add__input" /><br />
+        <input type="submit" value="Add" class="form-add__submit" />
+      </form>
+    </main>
+  </body>
+</html>

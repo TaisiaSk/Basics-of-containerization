@@ -1,0 +1,101 @@
+h3,
+p {
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  margin: 0.67em;
+}
+
+.navbar__link {
+  background-color: rgb(221, 234, 239);
+  border-radius: 5px;
+  padding: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+  transition: 0.3s ease;
+}
+
+.navbar__link:hover {
+  background-color: rgb(205, 227, 236);
+}
+
+.main {
+  margin: 0.67em;
+  margin-top: 1.5em;
+}
+
+.form-add {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.form-add input,
+.form-delete input {
+  padding: 0.5em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+
+.form-add__input {
+  border: 1px solid rgb(221, 234, 239);
+  border-radius: 7px;
+  min-width: 20vw;
+}
+
+.form-add__submit {
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(56, 88, 114);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.form-add__submit:hover {
+  opacity: 0.7;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+  margin-left: 0.67em;
+}
+
+.posts-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5em;
+  color: rgb(56, 88, 114);
+}
+
+.form-delete__submit {
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(56, 88, 114);
+  color: white;
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.form-delete__submit:hover {
+  opacity: 1;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Posts List</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/" class="navbar__link">Home</a>
+      <a href="/posts/add" class="navbar__link">Create New Post</a>
+    </nav>
+
+    <main class="main">
+      <h3>Posts List</h3>
+      <section class="posts">
+        <!-- <p>Text</p> -->
+
+        <% posts.forEach(function(post){ %>
+
+        <div class="posts-item" key="<%= post.id %>">
+          <p><%=post.text %></p>
+          <form method="POST" action="/posts/delete/<%= post.id %>" id="delete-form" class="form-delete">
+            <input type="submit" value="Delete" class="form-delete__submit" />
+          </form>
+        </div>
+
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>
