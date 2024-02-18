@@ -1,9 +1,9 @@
-import Service from './service.js';
+import PostsService from '../service/posts-service.js';
 
-class Controller {
+class PostsController {
   async create(req, res) {
     try {
-      const post = await Service.create(req.body);
+      const post = await PostsService.create(req.body);
       res.redirect('/posts/list');
     } catch (err) {
       res.status(500).json(err);
@@ -12,7 +12,7 @@ class Controller {
 
   async getAll(req, res) {
     try {
-      const posts = await Service.getAll();
+      const posts = await PostsService.getAll();
       res.render('posts/list', {
         posts: posts,
       });
@@ -23,7 +23,7 @@ class Controller {
 
   async delete(req, res) {
     try {
-      await Service.delete(req.params.id);
+      await PostsService.delete(req.params.id);
       res.redirect('/posts/list');
     } catch (err) {
       res.status(500).json(err.message);
@@ -31,4 +31,4 @@ class Controller {
   }
 }
 
-export default new Controller();
+export default new PostsController();

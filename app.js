@@ -1,7 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import router from './router.js';
+import PostsRouter from './routes/posts-router.js';
 
 dotenv.config({ path: './.env' });
 
@@ -23,7 +23,7 @@ app.set('views', 'views');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('/posts', router);
+app.use('/posts', PostsRouter);
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {

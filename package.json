@@ -2,11 +2,11 @@
   "name": "basics-of-containerization",
   "version": "1.0.0",
   "description": "A simple example of containerization using Docker",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",

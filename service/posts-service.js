@@ -1,6 +1,6 @@
-import Post from './model.js';
+import Post from '../models/post-model.js';
 
-class Service {
+class PostsService {
   async create(post) {
     const newPost = await Post.create(post);
     console.log(`Create new post with text: ${post.text}`);
@@ -23,4 +23,4 @@ class Service {
   }
 }
 
-export default new Service();
+export default new PostsService();
