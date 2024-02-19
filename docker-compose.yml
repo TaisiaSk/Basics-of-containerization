@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  mongo_db:
+    image: mongo:latest
+    ports:
+    - 27017:27017
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+  node_js:
+    image: node_service
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/app
+    environment:
+      - PORT=${PORT}
+      - MONGODB_URI=${MONGODB_URI}
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongo_db: {}

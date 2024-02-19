@@ -6,7 +6,7 @@ import PostsRouter from './routes/posts-router.js';
 dotenv.config({ path: './.env' });
 
 const PORT = process.env.PORT || 3000;
-const DB_URL = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PWD}@cluster0.a0zgjne.mongodb.net/?retryWrites=true&w=majority`;
+const DB_URL = process.env.MONGODB_URI;
 
 mongoose.connection
   .on('connected', () => {
